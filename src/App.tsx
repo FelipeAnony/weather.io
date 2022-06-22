@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SearchLocation from './Components/SearchLocation';
+import { WeatherDataType } from './types/mainTypes';
 
 function App() {
-  return <></>;
+  const [weatherData, setWeatherData] = useState<WeatherDataType>([]);
+
+  return (
+    <>
+      <SearchLocation setWeatherData={setWeatherData} />
+    </>
+  );
 }
 
 export default App;

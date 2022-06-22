@@ -1,0 +1,39 @@
+.searchLocation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ebebeb;
+  padding: 10px;
+  color: #777;
+}
+
+.searchLocation__innerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 3px;
+  border: solid thin #777;
+  padding: 3px;
+}
+
+.searchLocation__input {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  color: inherit;
+}
+
+.searchLocation__button {
+  width: 10%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  padding-top: 5px;
+  font-size: 18px;
+}
