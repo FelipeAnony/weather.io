@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('Should render apropiately', () => {
-  render(<App />);
+describe('App', () => {
+  it('Should render apropiately without errors', () => {
+    render(<App />);
+  });
 });

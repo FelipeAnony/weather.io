@@ -1,1 +1,1 @@
-export type WeatherDataType = [];
+export type WeatherDataType = [''];

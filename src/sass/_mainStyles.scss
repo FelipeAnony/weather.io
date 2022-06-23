@@ -1,0 +1,17 @@
+%flex-container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-container-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%component-default-size {
+  width: 100%;
+  max-width: 600px;
+}

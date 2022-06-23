@@ -17,7 +17,7 @@ function SearchLocation({ setWeatherData }: Props) {
   const handleSearchClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    setWeatherData([]);
+    setWeatherData(['']);
   };
 
   return (
@@ -29,6 +29,7 @@ function SearchLocation({ setWeatherData }: Props) {
           placeholder="Search location"
           onChange={handleChange}
           className="searchLocation__input"
+          autoFocus
         />
         <button onClick={handleSearchClick} className="searchLocation__button">
           <AiOutlineSearch />

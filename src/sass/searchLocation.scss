@@ -1,17 +1,17 @@
+@import 'mainStyles';
+@import 'colors';
+
 .searchLocation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 600px;
-  background-color: #ebebeb;
+  @extend %flex-container-center, %component-default-size;
+  background-color: $component-bg-color;
   padding: 10px;
   color: #777;
+  margin: 0 auto;
+  border-radius: 3px;
 }
 
 .searchLocation__innerContainer {
-  display: flex;
-  justify-content: center;
+  @extend %flex-container-center;
   width: 100%;
   max-width: 400px;
   border-radius: 3px;

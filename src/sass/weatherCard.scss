@@ -1,0 +1,6 @@
+@import 'mainStyles';
+
+.weatherCard {
+  @extend %flex-container-center;
+  
+}
