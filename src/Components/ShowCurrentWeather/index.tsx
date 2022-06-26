@@ -9,11 +9,9 @@ type Props = {
 function ShowCurrentWeather({ weatherData }: Props) {
   return (
     <div className="showCurrentWeather">
-      {weatherData.map((e) => (
-        <WeatherCard
-          dataToShow={{ city: 'London', weekDay: 'Monday', temperature: '22' }}
-        />
-      ))}
+      <WeatherCard
+        dataToShow={{ city: 'London', weekDay: 'Monday', temperature: '22' }}
+      />
     </div>
   );
 }
