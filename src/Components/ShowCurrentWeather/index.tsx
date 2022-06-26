@@ -1,6 +1,5 @@
 import { WeatherDataType } from '../../types/mainTypes';
 import '../../css/showCurrentWeather.css';
-import WeatherCard from '../WeatherCard';
 
 type Props = {
   weatherData: WeatherDataType;
@@ -8,11 +7,10 @@ type Props = {
 
 function ShowCurrentWeather({ weatherData }: Props) {
   return (
-    <div className="showCurrentWeather">
-      <WeatherCard
-        dataToShow={{ city: 'London', weekDay: 'Monday', temperature: '22' }}
-      />
-    </div>
+    <>
+      {weatherData.current.temp_c}
+      <p>{weatherData.location.name}</p>
+    </>
   );
 }
 

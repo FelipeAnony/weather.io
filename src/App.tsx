@@ -1,21 +1,49 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchLocation from './Components/SearchLocation';
 import ShowCurrentWeather from './Components/ShowCurrentWeather';
 import { WeatherDataType } from './types/mainTypes';
+import apiHelper from './helpers/apiHelper';
 
 function App() {
-  const [weatherData, setWeatherData] = useState<WeatherDataType>(['']);
+  const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
   const [city, setCity] = useState('');
+
+  useEffect(() => {
+    const getWeatherDataByUserIp = async () => {
+      try {
+        const data = await apiHelper.getWeatherDataByIp();
+        if (data.current) {
+          setWeatherData(data);
+        }
+      } catch (error) {
+        console.log('error');
+      }
+    };
+    getWeatherDataByUserIp();
+  }, []);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await apiHelper.getWeekForecastWeather(city);
+        if (data.current) {
+          setWeatherData(data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    if (city) {
+      loadData();
+    }
+  }, [city]);
 
   return (
     <>
       <SearchLocation setCity={setCity} />
-      <ShowCurrentWeather weatherData={['']} />
+      {WeatherData && <ShowCurrentWeather weatherData={WeatherData} />}
     </>
   );
 }
-
-//é muito importante ter muito claro em mente o que um componente deve fazer para evitar de sobrecarrega-lo com tarefas de outros
-//quanto mais desacoplado e independente, mais mantenivel e mais limpo o codigo
 
 export default App;

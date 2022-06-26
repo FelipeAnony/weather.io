@@ -30,6 +30,14 @@ const apiHelper = {
     let data: GetWeekForecastWeatherResponseType = await res.json();
     return data;
   },
+
+  getWeatherDataByIp: async () => {
+    let res = await fetch(
+      `${API_BASE}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=auto:ip`
+    );
+    let data: GetWeekForecastWeatherResponseType = await res.json();
+    return data;
+  },
 };
 
 export default apiHelper;

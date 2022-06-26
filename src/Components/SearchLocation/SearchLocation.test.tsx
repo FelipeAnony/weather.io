@@ -20,7 +20,7 @@ describe('SearchLocation component', () => {
         country: '',
         lat: 0,
         lon: 0,
-        url: '',
+        url: 'a',
       },
       {
         id: 1,
