@@ -9,6 +9,10 @@ describe('WeatherCard component', () => {
     date: 0,
     temp_c: 22,
     temp_f: 79,
+    maxTemp_c: 0,
+    minTemp_c: 0,
+    maxTemp_f: 0,
+    minTempf: 0,
   };
 
   const renderEl = () =>

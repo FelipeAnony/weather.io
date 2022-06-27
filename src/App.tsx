@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import SearchLocation from './Components/SearchLocation';
+
 import { WeatherDataType } from './types/mainTypes';
-import apiHelper from './helpers/apiHelper';
+
+import SearchLocation from './Components/SearchLocation';
 import WeatherCard from './Components/WeatherCard';
 
+import apiHelper from './helpers/apiHelper';
+
 function App() {
-  const [WeatherData, setWeatherData] = useState<WeatherDataType>();
+  const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
   const [city, setCity] = useState('');
 
   useEffect(() => {
@@ -41,6 +44,9 @@ function App() {
   return (
     <>
       <SearchLocation setCity={setCity} />
+      {WeatherData && (
+        <WeatherCard size="big" dataToShow={WeatherData.current} />
+      )}
     </>
   );
 }

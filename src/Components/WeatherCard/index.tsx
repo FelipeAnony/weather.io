@@ -1,4 +1,5 @@
 import '../../css/weatherCard.css';
+import { WeatherDataType } from '../../types/mainTypes';
 
 type Props = {
   dataToShow: {
@@ -8,11 +9,15 @@ type Props = {
     date: number;
     temp_c: number;
     temp_f: number;
+    maxTemp_c: number;
+    minTemp_c: number;
+    maxTemp_f: number;
+    minTempf: number;
   };
   size: 'small' | 'big';
 };
 
-function WeatherCard({ dataToShow }: Props) {
+function WeatherCard({ dataToShow, size }: Props) {
   return (
     <div className="weatherCard">
       <div className="weatherCard__imageContainer">

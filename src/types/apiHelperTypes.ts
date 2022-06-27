@@ -8,34 +8,7 @@ export type SearchCityResponse = {
   url: string;
 }[];
 
-export type GetCurrentWeatherResponseType = {
-  location: {
-    name: string;
-    region: string;
-    country: string;
-    tz_id: string;
-    localtime_epoch: EpochTimeStamp;
-    localtime: string;
-  };
-  current: {
-    last_updated_epoch: EpochTimeStamp;
-    last_updated: string;
-    temp_c: number;
-    temp_f: number;
-    is_day: number;
-    condition: {
-      text: string;
-      icon: string;
-      code: number;
-    };
-    humidity: number;
-    cloud: number;
-    feelslike_c: number;
-    feelslike_f: number;
-  };
-};
-
-export type GetWeekForecastWeatherResponseType = {
+export type ApiForecastResponseType = {
   location: {
     name: string;
     region: string;

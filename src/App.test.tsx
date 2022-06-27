@@ -1,8 +1,9 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
-import apiHelper from './helpers/apiHelper';
 import userEvent from '@testing-library/user-event';
+
+import App from './App';
+
+import apiHelper from './helpers/apiHelper';
 
 jest.mock('./helpers/apiHelper');
 
@@ -38,6 +39,7 @@ describe('App', () => {
         url: '',
       },
     ];
+
     mockedApiHelper.searchCity.mockReturnValue(Promise.resolve(response));
   });
 
