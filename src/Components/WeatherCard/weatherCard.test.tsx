@@ -6,7 +6,7 @@ describe('WeatherCard component', () => {
     location: 'London',
     icon: '',
     altText: 'Weather condition',
-    date: 0,
+    date: 1656360000,
     temp_c: 22,
     temp_f: 79,
     maxTemp_c: 0,

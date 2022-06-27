@@ -1,5 +1,5 @@
 import '../../css/weatherCard.css';
-import { WeatherDataType } from '../../types/mainTypes';
+import { dateFormatter } from '../../helpers/dateFormatterHelper';
 
 type Props = {
   dataToShow: {
@@ -14,17 +14,23 @@ type Props = {
     maxTemp_f: number;
     minTempf: number;
   };
-  size: 'small' | 'big';
+  size?: 'big';
 };
 
 function WeatherCard({ dataToShow, size }: Props) {
   return (
-    <div className="weatherCard">
-      <div className="weatherCard__imageContainer">
-        <img alt="Weather condition"></img>
+    <section className={size === 'big' ? 'weatherCard' : 'weatherCard--small'}>
+      <p className="weatherCard__location">{dataToShow.location}</p>
+      <div className="weatherCard__innerContainer">
+        <div className={'weatherCard__imageContainer'}>
+          <img src={dataToShow.icon} alt={dataToShow.altText}></img>
+        </div>
+        <div className="weatherCard__temp">
+          <p>{dataToShow.temp_c}</p>º<small>c</small>
+        </div>
       </div>
-      <div className="weatherCard__info"></div>
-    </div>
+      <p className="weatherCard__date">{dateFormatter(dataToShow.date)}</p>
+    </section>
   );
 }
 

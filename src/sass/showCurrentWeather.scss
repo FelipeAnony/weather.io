@@ -1,9 +1,0 @@
-@import 'mainStyles';
-@import 'colors';
-
-.showCurrentWeather {
-  @include flex-container-center;
-  @include component-default-size;
-  background-color: $component-bg-color;
-  margin: 5px auto;
-}
