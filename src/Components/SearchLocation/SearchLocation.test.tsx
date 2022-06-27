@@ -71,7 +71,7 @@ describe('SearchLocation component', () => {
     expect(await screen.findByText(/Madrid/)).toBeInTheDocument();
   });
 
-  it('Should call setCity function after user click in an option of search list with the correct value', async () => {
+  it('Should call setCity function after user click in an option of search list, with the correct value', async () => {
     renderEl();
     await userEvent.type(screen.getByRole('textbox'), 'Lon');
     await userEvent.click(await screen.findByText(/London/));

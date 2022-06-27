@@ -2,7 +2,8 @@
 @import 'colors';
 
 .showCurrentWeather {
-  @extend %flex-container-center, %component-default-size;
+  @include flex-container-center;
+  @include component-default-size;
   background-color: $component-bg-color;
   margin: 5px auto;
 }

@@ -2,7 +2,8 @@
 @import 'colors';
 
 .searchLocation {
-  @extend %flex-container-center, %component-default-size;
+  @include flex-container-center;
+  @include component-default-size;
   background-color: $component-bg-color;
   padding: 10px;
   color: #777;
@@ -11,7 +12,7 @@
 }
 
 .searchLocation__innerContainer {
-  @extend %flex-container-center;
+  @include flex-container-center;
   width: 100%;
   max-width: 400px;
   border-radius: 3px;

@@ -2,10 +2,14 @@ import '../../css/weatherCard.css';
 
 type Props = {
   dataToShow: {
-    city: string;
-    weekDay: string;
-    temperature: string;
+    location: string;
+    icon: string;
+    altText: string;
+    date: number;
+    temp_c: number;
+    temp_f: number;
   };
+  size: 'small' | 'big';
 };
 
 function WeatherCard({ dataToShow }: Props) {
@@ -14,11 +18,7 @@ function WeatherCard({ dataToShow }: Props) {
       <div className="weatherCard__imageContainer">
         <img alt="Weather condition"></img>
       </div>
-      <div className="weatherCard__info">
-        <p>{dataToShow.city}</p>
-        <p>{dataToShow.weekDay}</p>
-        <p>{dataToShow.temperature}</p>
-      </div>
+      <div className="weatherCard__info"></div>
     </div>
   );
 }

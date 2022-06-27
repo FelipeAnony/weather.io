@@ -63,7 +63,7 @@ function SearchLocation({ setCity }: Props) {
   }, [inputValue]);
 
   useEffect(() => {
-    if (searchOptionsList.length < 1) {
+    if (searchOptionsList.length < 3) {
       setSearchListIsOpen(false);
     }
   }, [searchOptionsList]);

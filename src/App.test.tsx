@@ -52,10 +52,10 @@ describe('App', () => {
     expect(mockedApiHelper.getWeatherDataByIp).toBeCalled();
   });
 
-  it('Should call getWeekForecastWeather from api when city state changes', async () => {
+  it('Should call getWeekForecastWeather from api when city state changes with the correct value', async () => {
     render(<App />);
-    await userEvent.type(screen.getByRole('textbox'), 'Lon');
-    await userEvent.click(await screen.findByText(/London/)); //after click, city state must change from default to 'London'
-    expect(mockedApiHelper.getWeekForecastWeather).toBeCalledWith('London');
+    await userEvent.type(screen.getByRole('textbox'), 'Lon'); //types in input to show options list
+    await userEvent.click(await screen.findByText(/London/)); //after click in an option of the list, city state must change from default to 'London'
+    expect(mockedApiHelper.getWeekForecastWeather).toBeCalledWith('London'); //then the getWeekForecastWeather must to be called with city state value, 'London'
   });
 });

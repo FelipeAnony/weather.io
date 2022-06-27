@@ -1,15 +1,9 @@
-.searchLocation__innerContainer, .searchLocation {
+.searchLocation {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.searchLocation {
   width: 100%;
   max-width: 600px;
-}
-
-.searchLocation {
   background-color: #fbfbfb;
   padding: 10px;
   color: #777;
@@ -18,6 +12,9 @@
 }
 
 .searchLocation__innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 400px;
   border-radius: 3px;
