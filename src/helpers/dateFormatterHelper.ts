@@ -27,7 +27,7 @@ export const dateFormatter = (timestamp: number) => {
     case 6:
       weekDay = 'Saturday';
       break;
-    case 7:
+    case 0:
       weekDay = 'Sunday';
       break;
   }

@@ -37,6 +37,7 @@ function SearchLocation({ setCity }: Props) {
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     setCity(e.currentTarget.id);
+    setInputValue('');
   };
 
   useEffect(() => {

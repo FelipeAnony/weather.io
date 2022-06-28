@@ -21,7 +21,7 @@ describe('WeatherCard component', () => {
   it('Should render apropiately', () => {
     renderEl();
     expect(screen.getByText('London')).toBeInTheDocument();
-    expect(screen.getByText('22')).toBeInTheDocument();
+    expect(screen.getByText(/22/)).toBeInTheDocument();
     expect(screen.getByText('Monday, 27/06')).toBeInTheDocument();
     expect(screen.getByAltText('Weather condition')).toBeInTheDocument();
   });

@@ -26,7 +26,16 @@ function WeatherCard({ dataToShow, size }: Props) {
           <img src={dataToShow.icon} alt={dataToShow.altText}></img>
         </div>
         <div className="weatherCard__temp">
-          <p>{dataToShow.temp_c}</p>º<small>c</small>
+          {size ? (
+            <span>
+              {dataToShow.temp_c} º<small>c</small>
+            </span>
+          ) : (
+            <>
+              <span>{dataToShow.maxTemp_c}</span>
+              <span>{dataToShow.minTemp_c}</span>
+            </>
+          )}
         </div>
       </div>
       <p className="weatherCard__date">{dateFormatter(dataToShow.date)}</p>

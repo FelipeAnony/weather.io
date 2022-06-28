@@ -6,6 +6,7 @@ import SearchLocation from './Components/SearchLocation';
 import WeatherCard from './Components/WeatherCard';
 
 import apiHelper from './helpers/apiHelper';
+import CardsCarousel from './Components/CardsCarousel';
 
 function App() {
   const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
@@ -47,6 +48,7 @@ function App() {
       {WeatherData && (
         <WeatherCard size="big" dataToShow={WeatherData.current} />
       )}
+      <CardsCarousel weatherData={WeatherData} />
     </>
   );
 }
