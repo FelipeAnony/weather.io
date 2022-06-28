@@ -14,19 +14,19 @@ type Props = {
     maxTemp_f: number;
     minTempf: number;
   };
-  size?: 'big';
+  day?: 'current';
 };
 
-function WeatherCard({ dataToShow, size }: Props) {
+function WeatherCard({ dataToShow, day }: Props) {
   return (
-    <section className={size === 'big' ? 'weatherCard' : 'weatherCard--small'}>
-      <p className="weatherCard__location">{dataToShow.location}</p>
+    <section className={'weatherCard'}>
+      <span className="weatherCard__location">{dataToShow.location}</span>
       <div className="weatherCard__innerContainer">
         <div className={'weatherCard__imageContainer'}>
-          <img src={dataToShow.icon} alt={dataToShow.altText}></img>
+          <img src={dataToShow.icon} alt={dataToShow.altText} />
         </div>
         <div className="weatherCard__temp">
-          {size ? (
+          {day ? (
             <span>
               {dataToShow.temp_c} º<small>c</small>
             </span>
@@ -38,7 +38,9 @@ function WeatherCard({ dataToShow, size }: Props) {
           )}
         </div>
       </div>
-      <p className="weatherCard__date">{dateFormatter(dataToShow.date)}</p>
+      <time className="weatherCard__date">
+        {dateFormatter(dataToShow.date)}
+      </time>
     </section>
   );
 }

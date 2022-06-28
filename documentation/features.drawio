@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="0Xdu4I6r2NnTC5utK08y" name="Página-1">
-        <mxGraphModel dx="1230" dy="464" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="821" dy="560" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Autocomplete search&lt;/li&gt;&lt;li&gt;Show Weather data of a selected location&lt;/li&gt;&lt;li&gt;If theres no selected location, search by ip, if its fail, appears london climate&lt;/li&gt;&lt;li&gt;Show resume weather data for the next week&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                <mxCell id="2" value="&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Autocomplete search&lt;/li&gt;&lt;li&gt;Show Weather data of a selected location&lt;/li&gt;&lt;li&gt;If theres no selected location, search by ip, if its fail, appears london climate&lt;/li&gt;&lt;li&gt;Show resume weather data for the next 3 days&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
                     <mxGeometry x="10" y="60" width="790" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="Features" style="whiteSpace=wrap;html=1;fontSize=33;" parent="1" vertex="1">
@@ -22,36 +22,16 @@
                     <mxGeometry x="10" y="240" width="790" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li&gt;Receives user entries&amp;nbsp;&lt;/li&gt;&lt;li&gt;Call search method (from apiHelper) with the entry and show a list of matched cities for user choose&lt;/li&gt;&lt;li&gt;After user choose a city, send the city info for App component to make the weather data request&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;fontSize=33;align=left;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="480" width="370" height="130" as="geometry"/>
+                    <mxGeometry x="390" y="475" width="370" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="13">
+                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="13" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="weatherCard (big)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
-                    <mxGeometry x="19" y="659" width="242" height="155" as="geometry"/>
+                <mxCell id="9" value="weatherCard" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
+                    <mxGeometry x="19" y="659" width="242" height="76" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li&gt;Receives data from parent component and show&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;fontSize=33;align=left;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="701" width="370" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="19" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="430" y="1030" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="14" value="CardsCarousel Component" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="960" width="240" height="140" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="weatherCard&lt;br&gt;(small)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="995" width="90" height="95" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" value="weatherCard&lt;br&gt;(small)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
-                    <mxGeometry x="130" y="995" width="90" height="95" as="geometry"/>
-                </mxCell>
-                <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
-                    <mxGeometry x="230" y="995" width="30" height="95" as="geometry"/>
-                </mxCell>
-                <mxCell id="19" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li&gt;Receives weather data from parent component, use map method and pass the data by props for weatherCard insides&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;fontSize=33;align=left;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="1012.5" width="370" height="60" as="geometry"/>
+                    <mxGeometry x="390" y="667" width="370" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="21" style="edgeStyle=none;html=1;fontSize=14;" parent="1" source="20" edge="1">
                     <mxGeometry relative="1" as="geometry">

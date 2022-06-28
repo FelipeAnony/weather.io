@@ -1,42 +1,37 @@
 @import 'mainStyles';
 @import 'colors';
 
-.weatherCard, .weatherCard--small {
-  background-color: $component-bg-color;
-  margin: 5px auto;
-}
-
 .weatherCard {
   @include flex-container-center-column;
   @include component-default-size;
-
-  .weatherCard__location {
-    margin: 5px 0;
-  }
+  background-color: $component-bg-color;
+  margin: 5px auto;
+}
   
-  .weatherCard__innerContainer {
-    @include flex-container-center;
-    width: 80%;
-    height: 100px;
-    flex: 0;
-    flex-wrap: wrap;
-  }
+.weatherCard__location {
+  margin: 5px 0;
+}
   
-  .weatherCard__imageContainer{
-    @include flex-container-center;
-    height: 100%;
-    flex-shrink: 0;
-  }
-
-  .weatherCard__temp {
-    display: flex;
-    font-size: 46px;
-  }
+.weatherCard__innerContainer {
+  @include flex-container-center;
+  width: 80%;
+  height: 100px;
+  flex: 0;
+  flex-wrap: wrap;
+}
   
-  .weatherCard__date {
-    margin: 5px 0;
-  }
-
+.weatherCard__imageContainer{
+  @include flex-container-center;
+  height: 100%;
+  flex-shrink: 0;
 }
 
-.weatherCard--small {}
+.weatherCard__temp {
+  display: flex;
+  font-size: 46px;
+}
+  
+.weatherCard__date {
+  margin: 5px 0;
+}
+

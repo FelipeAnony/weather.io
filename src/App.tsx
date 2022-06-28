@@ -6,7 +6,6 @@ import SearchLocation from './Components/SearchLocation';
 import WeatherCard from './Components/WeatherCard';
 
 import apiHelper from './helpers/apiHelper';
-import CardsCarousel from './Components/CardsCarousel';
 
 function App() {
   const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
@@ -45,10 +44,14 @@ function App() {
   return (
     <>
       <SearchLocation setCity={setCity} />
-      {WeatherData && (
-        <WeatherCard size="big" dataToShow={WeatherData.current} />
-      )}
-      <CardsCarousel weatherData={WeatherData} />
+      {WeatherData &&
+        WeatherData.week.map((e, i) => {
+          if (i === 0)
+            return (
+              <WeatherCard day="current" dataToShow={WeatherData.current} />
+            );
+          return <WeatherCard key={e.date} dataToShow={e} />;
+        })}
     </>
   );
 }
