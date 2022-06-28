@@ -26,12 +26,29 @@
   flex-shrink: 0;
 }
 
-.weatherCard__temp {
+.weatherCard__temp,  .weatherCard__temp--current {
   display: flex;
+}
+
+.weatherCard__temp {
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.weatherCard__ctemp {
   font-size: 46px;
 }
   
+
+.weatherCard__maxtemp, .weatherCard__mintemp {
+  font-size: 26px;
+}
+
+.weatherCard__mintemp {
+  opacity: .7;
+}
+
+
 .weatherCard__date {
   margin: 5px 0;
 }
-

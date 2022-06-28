@@ -25,15 +25,21 @@ function WeatherCard({ dataToShow, day }: Props) {
         <div className={'weatherCard__imageContainer'}>
           <img src={dataToShow.icon} alt={dataToShow.altText} />
         </div>
-        <div className="weatherCard__temp">
+        <div
+          className={day ? 'weatherCard__temp--current' : 'weatherCard__temp'}
+        >
           {day ? (
-            <span>
-              {dataToShow.temp_c} º<small>c</small>
+            <span className="weatherCard__ctemp">
+              {dataToShow.temp_c} <small>ºc</small>
             </span>
           ) : (
             <>
-              <span>{dataToShow.maxTemp_c}</span>
-              <span>{dataToShow.minTemp_c}</span>
+              <span className="weatherCard__maxtemp">
+                {dataToShow.maxTemp_c} <small>ºc</small>
+              </span>
+              <span className="weatherCard__mintemp">
+                {dataToShow.minTemp_c} <small>ºc</small>
+              </span>
             </>
           )}
         </div>
