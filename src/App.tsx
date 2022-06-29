@@ -6,10 +6,12 @@ import SearchLocation from './Components/SearchLocation';
 import WeatherCard from './Components/WeatherCard';
 
 import apiHelper from './helpers/apiHelper';
+import Switch from './Components/Switch';
 
 function App() {
   const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
   const [city, setCity] = useState('');
+  const [unit, setUnit] = useState<'celsius' | 'fahrenheit'>('celsius');
 
   useEffect(() => {
     const getWeatherDataByUserIp = async () => {
@@ -42,8 +44,9 @@ function App() {
   }, [city]);
 
   return (
-    <>
+    <main>
       <SearchLocation setCity={setCity} />
+      <Switch setValue={setUnit} value={unit} />
       {WeatherData &&
         WeatherData.week.map((e, i) => {
           if (i === 0)
@@ -56,7 +59,7 @@ function App() {
             );
           return <WeatherCard key={i} dataToShow={e} />;
         })}
-    </>
+    </main>
   );
 }
 
