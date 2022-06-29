@@ -10,6 +10,8 @@ export type WeatherDataType = {
     minTemp_c: number;
     maxTemp_f: number;
     minTempf: number;
+    uv: number;
+    humidity: number;
   };
   week: {
     location: string;

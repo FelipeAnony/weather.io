@@ -48,9 +48,13 @@ function App() {
         WeatherData.week.map((e, i) => {
           if (i === 0)
             return (
-              <WeatherCard day="current" dataToShow={WeatherData.current} />
+              <WeatherCard
+                key={i}
+                day="current"
+                dataToShow={WeatherData.current}
+              />
             );
-          return <WeatherCard key={e.date} dataToShow={e} />;
+          return <WeatherCard key={i} dataToShow={e} />;
         })}
     </>
   );

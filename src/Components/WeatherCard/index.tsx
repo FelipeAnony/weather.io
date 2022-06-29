@@ -1,6 +1,9 @@
 import '../../css/weatherCard.css';
 import { dateFormatter } from '../../helpers/dateFormatterHelper';
 
+import { WiHumidity } from 'react-icons/wi';
+import { BsFillSunFill } from 'react-icons/bs';
+
 type Props = {
   dataToShow: {
     location: string;
@@ -13,6 +16,8 @@ type Props = {
     minTemp_c: number;
     maxTemp_f: number;
     minTempf: number;
+    uv?: number;
+    humidity?: number;
   };
   day?: 'current';
 };
@@ -29,7 +34,7 @@ function WeatherCard({ dataToShow, day }: Props) {
           className={day ? 'weatherCard__temp--current' : 'weatherCard__temp'}
         >
           {day ? (
-            <span className="weatherCard__ctemp">
+            <span title="Current temperature" className="weatherCard__ctemp">
               {dataToShow.temp_c} <small>ºc</small>
             </span>
           ) : (
@@ -44,6 +49,14 @@ function WeatherCard({ dataToShow, day }: Props) {
           )}
         </div>
       </div>
+      {dataToShow.uv && (
+        <section className="weatherCard__extraInfo">
+          <WiHumidity title="Humidity" />
+          <span title="Humidity">{dataToShow.humidity}</span>
+          <BsFillSunFill title="Uv ray" />
+          <span title="Uv ray">{dataToShow.uv}</span>
+        </section>
+      )}
       <time className="weatherCard__date">
         {dateFormatter(dataToShow.date)}
       </time>

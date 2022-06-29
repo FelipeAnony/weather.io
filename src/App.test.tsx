@@ -56,6 +56,8 @@ describe('App', () => {
         minTemp_c: 12,
         maxTemp_f: 0,
         minTempf: 0,
+        uv: 5,
+        humidity: 55,
       },
       week: [
         {

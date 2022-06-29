@@ -6,6 +6,7 @@
   @include component-default-size;
   background-color: $component-bg-color;
   margin: 5px auto;
+  padding: 5px;
 }
   
 .weatherCard__location {
@@ -48,6 +49,17 @@
   opacity: .7;
 }
 
+.weatherCard__extraInfo {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+
+  svg {
+    margin-left: auto;
+    margin-right: 2px;
+  }
+}
 
 .weatherCard__date {
   margin: 5px 0;

@@ -14,12 +14,16 @@ describe('WeatherCard component', () => {
       minTemp_c: 0,
       maxTemp_f: 0,
       minTempf: 0,
+      uv: 5,
+      humidity: 55,
     };
     render(<WeatherCard day="current" dataToShow={dataToShow} />);
     expect(screen.getByText('London')).toBeInTheDocument();
     expect(screen.getByText(/22/)).toBeInTheDocument();
-    expect(screen.getByText('Monday, 27/06')).toBeInTheDocument();
     expect(screen.getByAltText('Weather condition')).toBeInTheDocument();
+    expect(screen.getAllByTitle('Humidity').length).toBe(2);
+    expect(screen.getAllByTitle('Uv ray').length).toBe(2);
+    expect(screen.getByText('Monday, 27/06')).toBeInTheDocument();
   });
 
   it('Should render apropiately without prop day', () => {

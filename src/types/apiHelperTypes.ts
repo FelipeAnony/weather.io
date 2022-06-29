@@ -34,6 +34,7 @@ export type ApiForecastResponseType = {
     cloud: number;
     feelslike_c: number;
     feelslike_f: number;
+    uv: number;
   };
   forecast: {
     forecastday: {

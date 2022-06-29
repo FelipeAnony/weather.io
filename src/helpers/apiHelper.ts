@@ -24,7 +24,7 @@ const apiHelper = {
 
     return {
       current: {
-        location: data.location.name,
+        location: `${data.location.name}, ${data.location.country}`,
         icon: data.current.condition.icon,
         altText: data.current.condition.text,
         date: data.current.last_updated_epoch,
@@ -34,10 +34,12 @@ const apiHelper = {
         minTemp_c: data.forecast.forecastday[0].day.mintemp_c,
         maxTemp_f: data.forecast.forecastday[0].day.maxtemp_f,
         minTempf: data.forecast.forecastday[0].day.mintemp_f,
+        uv: data.current.uv,
+        humidity: data.current.humidity,
       },
       week: [
         ...data.forecast.forecastday.map((e) => ({
-          location: data.location.name,
+          location: `${data.location.name}, ${data.location.country}`,
           icon: e.day.condition.icon,
           altText: e.day.condition.text,
           date: e.date_epoch,
@@ -57,9 +59,12 @@ const apiHelper = {
       `${API_BASE}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=auto:ip&days=7`
     );
     let data: ApiForecastResponseType = await res.json();
+
+    console.log(data);
+
     return {
       current: {
-        location: data.location.name,
+        location: `${data.location.name}, ${data.location.country}`,
         icon: data.current.condition.icon,
         altText: data.current.condition.text,
         date: data.current.last_updated_epoch,
@@ -69,10 +74,12 @@ const apiHelper = {
         minTemp_c: data.forecast.forecastday[0].day.mintemp_c,
         maxTemp_f: data.forecast.forecastday[0].day.maxtemp_f,
         minTempf: data.forecast.forecastday[0].day.mintemp_f,
+        uv: data.current.uv,
+        humidity: data.current.humidity,
       },
       week: [
         ...data.forecast.forecastday.map((e) => ({
-          location: data.location.name,
+          location: `${data.location.name}, ${data.location.country}`,
           icon: e.day.condition.icon,
           altText: e.day.condition.text,
           date: e.date_epoch,
