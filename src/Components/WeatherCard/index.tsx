@@ -20,9 +20,10 @@ type Props = {
     humidity?: number;
   };
   day?: 'current';
+  unit: 'celsius' | 'fahrenheit';
 };
 
-function WeatherCard({ dataToShow, day }: Props) {
+function WeatherCard({ dataToShow, day, unit }: Props) {
   return (
     <section className={'weatherCard'}>
       <span className="weatherCard__location">{dataToShow.location}</span>
@@ -39,15 +40,22 @@ function WeatherCard({ dataToShow, day }: Props) {
         >
           {day ? (
             <span title="Current temperature" className="weatherCard__ctemp">
-              {dataToShow.temp_c} <small>ºc</small>
+              {unit === 'celsius' ? dataToShow.temp_c : dataToShow.temp_f}{' '}
+              {unit === 'celsius' ? <small>ºc</small> : <small>ºf</small>}
             </span>
           ) : (
             <>
               <span className="weatherCard__maxtemp">
-                {dataToShow.maxTemp_c} <small>ºc</small>
+                {unit === 'celsius'
+                  ? dataToShow.maxTemp_c
+                  : dataToShow.maxTemp_f}
+                {unit === 'celsius' ? <small> º c</small> : <small> º f</small>}
               </span>
               <span className="weatherCard__mintemp">
-                {dataToShow.minTemp_c} <small>ºc</small>
+                {unit === 'celsius'
+                  ? dataToShow.minTemp_c
+                  : dataToShow.minTempf}
+                {unit === 'celsius' ? <small> º c</small> : <small> º f</small>}
               </span>
             </>
           )}

@@ -55,9 +55,10 @@ function App() {
                 key={i}
                 day="current"
                 dataToShow={WeatherData.current}
+                unit={unit}
               />
             );
-          return <WeatherCard key={i} dataToShow={e} />;
+          return <WeatherCard key={i} dataToShow={e} unit={unit} />;
         })}
     </main>
   );
