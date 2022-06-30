@@ -28,7 +28,11 @@ function WeatherCard({ dataToShow, day }: Props) {
       <span className="weatherCard__location">{dataToShow.location}</span>
       <div className="weatherCard__innerContainer">
         <div className={'weatherCard__imageContainer'}>
-          <img src={dataToShow.icon} alt={dataToShow.altText} />
+          <img
+            src={dataToShow.icon}
+            alt={dataToShow.altText}
+            title={dataToShow.altText}
+          />
         </div>
         <div
           className={day ? 'weatherCard__temp--current' : 'weatherCard__temp'}

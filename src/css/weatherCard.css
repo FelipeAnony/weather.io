@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: calc(100% - 20px);
   max-width: 600px;
-  background-color: #fbfbfb;
+  background-color: rgba(251, 251, 251, 0.5019607843);
   margin: 5px auto;
   padding: 5px;
+  border-radius: 3px;
 }
 
 .weatherCard__location {

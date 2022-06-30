@@ -10,6 +10,6 @@
 }
 
 @mixin component-default-size {
-  width: 100%;
+  width: calc(100% - 20px);
   max-width: 600px;
 }

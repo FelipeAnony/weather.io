@@ -1,7 +1,7 @@
 .switch {
-  width: 100%;
+  width: calc(100% - 20px);
   max-width: 600px;
-  background-color: #fbfbfb;
+  background-color: rgba(251, 251, 251, 0.5019607843);
   margin: 5px auto;
   padding: 5px 10px;
   border-radius: 5px;
@@ -42,7 +42,7 @@
 .switch__selector {
   width: 80px;
   height: 100%;
-  background: linear-gradient(to right, #6800B9 0%, #DD00AC 100%);
+  background: linear-gradient(to right, #222 0%, #000000 100%);
   position: absolute;
   padding: 1px;
   z-index: 0;
@@ -61,7 +61,7 @@
 }
 
 .switch__pointer {
-  background-color: black;
+  background-color: #777;
   opacity: 0.4;
   border-radius: 50%;
   width: 21px;
