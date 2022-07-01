@@ -1,0 +1,25 @@
+.loading {
+  width: calc(100% - 20px);
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 70vh;
+  background-color: rgba(251, 251, 251, 0.5019607843);
+  border-radius: 3px;
+}
+
+.loading__title {
+  color: white;
+}
+
+.loading__img {
+  width: 30%;
+  max-width: 80px;
+}
+
+.loading__message {
+  color: white;
+}

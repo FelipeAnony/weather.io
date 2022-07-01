@@ -7,6 +7,7 @@ import WeatherCard from './Components/WeatherCard';
 
 import apiHelper from './helpers/apiHelper';
 import Switch from './Components/Switch';
+import Loading from './Components/Loading';
 
 function App() {
   const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
@@ -21,7 +22,7 @@ function App() {
           setWeatherData(data);
         }
       } catch (error) {
-        console.log('error');
+        console.log(error);
       }
     };
     getWeatherDataByUserIp();
@@ -47,7 +48,7 @@ function App() {
     <main>
       <SearchLocation setCity={setCity} />
       <Switch setValue={setUnit} value={unit} />
-      {WeatherData &&
+      {WeatherData ? (
         WeatherData.week.map((e, i) => {
           if (i === 0)
             return (
@@ -59,7 +60,10 @@ function App() {
               />
             );
           return <WeatherCard key={i} dataToShow={e} unit={unit} />;
-        })}
+        })
+      ) : (
+        <Loading message="Loading data by your current location..." />
+      )}
     </main>
   );
 }
