@@ -10,7 +10,7 @@ After you have the api key, create the file .env and put the key on it:
 
 <pre> REACT_APP_API_KEY = YOUR-API-KEY</pre> 
 
-Or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, just run 
+Or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, install the dependencies and just run 
 
 <pre>npm start</pre>
 
