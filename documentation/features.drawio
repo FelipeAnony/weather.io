@@ -1,9 +1,15 @@
 <mxfile host="65bd71144e">
     <diagram id="0Xdu4I6r2NnTC5utK08y" name="Página-1">
-        <mxGraphModel dx="821" dy="484" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#4D4D4D" math="0" shadow="0">
+        <mxGraphModel dx="990" dy="560" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#4D4D4D" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="39" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="356" y="1065" width="199" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="358" y="1009" width="197" height="36" as="geometry"/>
+                </mxCell>
                 <mxCell id="2" value="&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Autocomplete search&lt;/li&gt;&lt;li&gt;Show Weather data of a selected location&lt;/li&gt;&lt;li&gt;If theres no selected location, search by ip, if its fail, show error message&lt;/li&gt;&lt;li&gt;Show resume weather data for the next 3 days&lt;/li&gt;&lt;li&gt;Celsius and Fahrenheit units to choose&lt;/li&gt;&lt;li&gt;when data is loading show a loading component&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fillColor=#1A1A1A;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
                     <mxGeometry x="10" y="60" width="790" height="161" as="geometry"/>
                 </mxCell>
@@ -78,6 +84,28 @@
                 </mxCell>
                 <mxCell id="30" value="weatherCard&lt;br&gt;future info" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
                     <mxGeometry x="141" y="907" width="122" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;" edge="1" parent="1" source="32">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="357" y="1027" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="loading" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="23" y="1006" width="242" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;" edge="1" parent="1" source="33">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="357" y="1082" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="Message" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+                    <mxGeometry x="23" y="1063" width="242" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Visual feedback when data loads" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="368" y="1018" width="185" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Show general messages" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="1073" width="141" height="18" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

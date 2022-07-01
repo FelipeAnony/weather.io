@@ -17,7 +17,7 @@ const apiHelper = {
 
   getWeekForecastWeather: async (city: string): Promise<WeatherDataType> => {
     let res = await fetch(
-      `${API_BASE}/forecast.json?key=a${process.env.REACT_APP_API_KEY}&q=${city}&days=7`
+      `${API_BASE}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&days=7`
     );
 
     let data: ApiForecastResponseType = await res.json();
