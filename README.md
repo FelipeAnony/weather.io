@@ -10,7 +10,7 @@ After you have the api key, create the file .env and put the key on it:
 
 <pre> REACT_APP_API_KEY = YOUR-API-KEY</pre> 
 
-or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, just run 
+Or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, just run 
 
 <pre>npm start</pre>
 
@@ -19,12 +19,13 @@ or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, ju
 ### Features
 
 <ul>
-  <li>Get automatically weather data based on user location (by ip).</li>
-  <li>You can see weather forecast from any part of the world that you want.</li>
+  <li>Get automatic weather data based on user location (by ip).</li>
+  <li>You can see the weather forecast from any part of the world that you want.</li>
   <li>You can choose between Celsius or Fahrenheit units</li>
+  <li>Fully responsive: Works well in all devices and screen sizes. Even in your microwave its still working (of course, if it's fluent in js)</li>
 </ul>
 
-### technologies and best practices used
+### Technologies and best practices used
 
 <ul>
   <li>HTML5, CSS3, JavaScript</li>
