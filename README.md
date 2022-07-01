@@ -12,6 +12,8 @@ After you have the api key, create the file .env and put the key on it:
 
 Or if you prefer, change it directly on src/helpers/apiHelper.ts. After that, install the dependencies and just run 
 
+<pre>npm install</pre>
+
 <pre>npm start</pre>
 
 <hr>
