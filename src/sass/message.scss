@@ -1,0 +1,14 @@
+@import 'mainStyles';
+
+.message{
+  @include component-default-size;
+  @include flex-container-center;
+  padding: 5px;
+  margin: 5px auto;
+  border-radius: 3px;
+}
+
+
+.message__icon {
+  margin-right: 5px;
+}

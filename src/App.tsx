@@ -8,11 +8,13 @@ import WeatherCard from './Components/WeatherCard';
 import apiHelper from './helpers/apiHelper';
 import Switch from './Components/Switch';
 import Loading from './Components/Loading';
+import Message from './Components/Message';
 
 function App() {
   const [WeatherData, setWeatherData] = useState<WeatherDataType | null>(null);
   const [city, setCity] = useState('');
   const [unit, setUnit] = useState<'celsius' | 'fahrenheit'>('celsius');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const getWeatherDataByUserIp = async () => {
@@ -22,7 +24,7 @@ function App() {
           setWeatherData(data);
         }
       } catch (error) {
-        console.log(error);
+        setError('Error to get data by user location.');
       }
     };
     getWeatherDataByUserIp();
@@ -36,7 +38,7 @@ function App() {
           setWeatherData(data);
         }
       } catch (error) {
-        console.log(error);
+        setError('Error. Please try again.');
       }
     };
     if (city) {
@@ -62,8 +64,12 @@ function App() {
           return <WeatherCard key={i} dataToShow={e} unit={unit} />;
         })
       ) : (
-        <Loading message="Loading data by your current location..." />
+        <Loading
+          error={error}
+          message="Loading data by your current location..."
+        />
       )}
+      {error && WeatherData && <Message message={error} />}
     </main>
   );
 }
